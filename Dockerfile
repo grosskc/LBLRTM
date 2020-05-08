@@ -25,10 +25,6 @@ RUN cd /LBLRTM/build; \
 VOLUME LBLRTM_In
 VOLUME LBLRTM_Out
 
-# COPY LBLRTM_entrypoint.sh .
-
-# run model and build binary line file (TAPE3)
-# ENTRYPOINT ["./LBLRTM_entrypoint.sh"]
 ENV PATH "/LBLRTM:$PATH"
 RUN echo "export PATH=/new/path:${PATH}" >> /root/.bashrc
 WORKDIR /data
