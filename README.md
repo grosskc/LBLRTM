@@ -9,13 +9,14 @@ docker build --tag rs/lblrtm:latest -f Dockerfile ./
 
 To run the LBLRTM executable from the command line in a folder with the appropriate `TAPE3` and `TAPE5` files, perform:
 
-  * linux / macOS
+* linux / macOS
 
-      ```bash
-      docker run --rm --volume "`pwd`:/data" -it rs/lblrtm lblrtm
-      ```
-  * Windows
+   ```bash
+   docker run --rm --volume "`pwd`:/data" -it rs/lblrtm lblrtm
+   ```
 
-      ```bash
-      docker run --rm --volume ${PWD}:/data -it rs/lblrtm lblrtm
-      ```
+* Windows
+
+   ```bash
+   docker run --rm --volume ${PWD}:/data -it rs/lblrtm lblrtm
+   ```
