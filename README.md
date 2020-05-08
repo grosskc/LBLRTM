@@ -1,28 +1,37 @@
+# Stuff for me
+
+```bash
+docker build --tag rs/lblrtm:latest -f Dockerfile ./
+docker run --rm --volume "`pwd`:/data" -it rs/lblrtm
+```
+
 # LBLRTM
 
 ---
 **Contents**
 
-1. [Introduction](#intro)
-2. [Cloning the Latest Release](#cloning)
-3. [LBLRTM and Docker](#docker)
-4. [General LNFL/LBLRTM File Information](#general)
-    1. [Platforms on which LBLRTM can be run](#platforms)
-    2. [Issues relating to unformatted files on UNIX and LINUX systems](#unformatted)
-	3. [LNFL/LBLRTM Naming Convention](#nomenclature)
-	4. [LNFL/LBLRTM Input File (TAPE5) Format](#tape5)
-	5. [LBLRTM Output File Format](#lblout)
-5. [Instructions and Tips for Running LNFL](#runlnfl)
-	1. [Input files for LNFL](#lnflin)
-	2. [Output files for LNFL](#lnflout)
-	3. [Sequence for running LNFL](#lnflseq)
-6. [Instructions and Tips for Compiling and Running LBLRTM](#runlbl)
-	1. [Required input files for LBLRTM](#lblin)
-	2. [Layer numbering scheme](#laynum)
-	3. [Output files for LBLRTM](#lblout)
-	4. [Sequence for running LBLRTM](#lblseq)
-7. [Tests](#tests)
-8. [Frequently Asked Questions](#faq)
+- [Stuff for me](#stuff-for-me)
+- [LBLRTM](#lblrtm)
+- [Introduction <a name="intro"></a>](#introduction)
+- [Cloning the Latest Release <a name="cloning"></a>](#cloning-the-latest-release)
+- [LBLRTM and Docker <a name="docker"></a>](#lblrtm-and-docker)
+- [General LNFL/LBLRTM File Information <a name="general"></a>](#general-lnfllblrtm-file-information)
+	- [Platforms on which LBLRTM can be run <a name="platforms"></a>](#platforms-on-which-lblrtm-can-be-run)
+	- [Issues relating to unformatted files on UNIX and LINUX systems <a name="unformatted"></a>](#issues-relating-to-unformatted-files-on-unix-and-linux-systems)
+	- [LNFL/LBLRTM Naming Convention <a name="nomenclature"></a>](#lnfllblrtm-naming-convention)
+	- [LNFL/LBLRTM Input File (TAPE5) Format <a name="tape5"></a>](#lnfllblrtm-input-file-tape5-format)
+	- [LBLRTM Output File Format <a name="lblout"></a>](#lblrtm-output-file-format)
+- [Instructions and Tips for Running LNFL <a name="runlnfl"></a>](#instructions-and-tips-for-running-lnfl)
+	- [Input files for LNFL <a name="lnflin"></a>](#input-files-for-lnfl)
+	- [Output files for LNFL <a name="lnflout"></a>](#output-files-for-lnfl)
+	- [Sequence for running LNFL <a name="lnflseq"></a>](#sequence-for-running-lnfl)
+- [Instructions and Tips for Compiling and Running LBLRTM <a name="runlbl"></a>](#instructions-and-tips-for-compiling-and-running-lblrtm)
+	- [Required input files for LBLRTM <a name="lblin"></a>](#required-input-files-for-lblrtm)
+	- [Layer numbering scheme <a name="laynum"></a>](#layer-numbering-scheme)
+	- [Output files for LBLRTM <a name="lblout"></a>](#output-files-for-lblrtm)
+	- [Sequence for running LBLRTM <a name="lblseq"></a>](#sequence-for-running-lblrtm)
+- [Tests <a name="tests"></a>](#tests)
+- [Frequently Asked Questions <a name="faq"></a>](#frequently-asked-questions)
 
 # Introduction <a name="intro"></a>
 

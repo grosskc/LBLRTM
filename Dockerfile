@@ -16,14 +16,20 @@ ADD src /LBLRTM/src
 
 # build the model and clean up after the build
 RUN cd /LBLRTM/build; \
+  make -f make_lblrtm linuxGNUsgl; \
   make -f make_lblrtm linuxGNUdbl; \
-  rm -rf lblrtm_v12.9_linux_gnu_dbl.obj *.mod; cd /LBLRTM; \
-  ln -s lblrtm_v12.9_linux_gnu_dbl lblrtm
+  rm -rf lblrtm_v12.9_linux_gnu_*.obj *.mod; \
+  cd /LBLRTM; \
+  ln -s lblrtm_v12.9_linux_gnu_sgl lblrtm
 
 VOLUME LBLRTM_In
 VOLUME LBLRTM_Out
 
-COPY LBLRTM_entrypoint.sh .
+# COPY LBLRTM_entrypoint.sh .
 
 # run model and build binary line file (TAPE3)
-ENTRYPOINT ["./LBLRTM_entrypoint.sh"]
+# ENTRYPOINT ["./LBLRTM_entrypoint.sh"]
+ENV PATH "/LBLRTM:$PATH"
+RUN echo "export PATH=/new/path:${PATH}" >> /root/.bashrc
+WORKDIR /data
+CMD ["/bin/bash"]
