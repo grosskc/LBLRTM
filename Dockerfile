@@ -22,9 +22,6 @@ RUN cd /LBLRTM/build; \
   cd /LBLRTM; \
   ln -s lblrtm_v12.9_linux_gnu_sgl lblrtm
 
-VOLUME LBLRTM_In
-VOLUME LBLRTM_Out
-
 ENV PATH "/LBLRTM:$PATH"
 RUN echo "export PATH=/new/path:${PATH}" >> /root/.bashrc
 WORKDIR /data
