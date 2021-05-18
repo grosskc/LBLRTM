@@ -4,7 +4,7 @@
 !     created:   $Date$
 !
 !  --------------------------------------------------------------------------
-! |  Copyright ©, Atmospheric and Environmental Research, Inc., 2015        |
+! |  Copyright ï¿½, Atmospheric and Environmental Research, Inc., 2015        |
 ! |                                                                          |
 ! |  All rights reserved. This source code is part of the LBLRTM software    |
 ! |  and is designed for scientific and research purposes. Atmospheric and   |
@@ -1195,7 +1195,7 @@
      &         /,5x,'Rayleigh:    ',f10.3,/)                            
                                                                         
 !                                                                       
-      END                                           
+end program LBLRTM
 !********************************************************************** 
 !                                                                       
       BLOCK DATA 
@@ -1331,7 +1331,7 @@
       data icflg /-999/ 
 ! --- for analytic derivative ---                                       
                                                                         
-      END                                           
+end block data
       FUNCTION NWDL (IWD,ILAST) 
 !                                                                       
       DIMENSION IWD(*) 
@@ -1345,7 +1345,7 @@
 !                                                                       
       STOP ' NWDL - IWD,ILAST ' 
 !                                                                       
-      END                                           
+end function NWDL
 !                                                                       
 !     -------------------------------------------------------------     
 !                                                                       
@@ -1358,7 +1358,7 @@
 !                                                                       
       RETURN 
 !                                                                       
-      END                                           
+end subroutine ENDFIL
 !                                                                       
 !     -------------------------------------------------------------     
 !                                                                       
@@ -1373,7 +1373,7 @@
 !                                                                       
       return 
 !                                                                       
-      END                                           
+end subroutine endfil_4
 !     -------------------------------------------------------------     
                                                                         
       SUBROUTINE SKIPFL (NUMFL,IFILE,IEOF) 
@@ -1389,7 +1389,7 @@
 !                                                                       
       RETURN 
 !                                                                       
-      END                                           
+end subroutine SKIPFL
 !                                                                       
 !     -------------------------------------------------------------     
 !                                                                       
@@ -1442,7 +1442,7 @@
   900 FORMAT (' TIME AT THE START OF --COPYFL-- ',F10.3) 
   905 FORMAT (' TIME REQUIRED FOR --COPYFL -- ',F10.3) 
 !                                                                       
-      END                                           
+end subroutine COPYFL
 !                                                                       
 !     -------------------------------------------------------------     
 !                                                                       
@@ -1486,7 +1486,7 @@
   900 FORMAT (' QNTIFY: PATH NOT LEFT JUSTIFIED: ',A55) 
   910 FORMAT ('(A',I2.2,',I3.3)') 
 !                                                                       
-      END                                           
+end subroutine QNTIFY
 !                                                                       
 !     ---------------------------------------------------------------   
 !                                                                       
@@ -1539,7 +1539,7 @@
   900 FORMAT ('       Opened layer optical depth file:  ',i5,' = ',A57) 
   910 FORMAT ('LAYER ',I5,' OF ',I5,':') 
 !                                                                       
-      END                                           
+end subroutine OPNODF
 !                                                                       
 !     ---------------------------------------------------------------   
 !                                                                       
@@ -1582,7 +1582,7 @@
   900 FORMAT ('          Opened layer radiance file:  ',A57,/) 
   910 FORMAT ('LAYER ',I5,' OF ',I5,':') 
 !                                                                       
-      END                                           
+end subroutine OPNRAD
 !                                                                       
 !     ---------------------------------------------------------------   
 !                                                                       
@@ -1755,7 +1755,7 @@
      &        '    Opened accumulated optical depth file:  ',A57)       
   910 FORMAT ('LAYER ',I5,' OF ',I5,':') 
 !                                                                       
-      END                                           
+end subroutine OPNDRV
 !                                                                       
 !     ----------------------------------------------------------------  
 !                                                                       
@@ -1903,7 +1903,7 @@
   965 FORMAT (' ',4X,A6,' = ',I6,                                       &
      &        3X,I6,3X,I6,3X,I6,3X,i6,3X,1PE12.4)                       
 !                                                                       
-      END                                           
+end subroutine PRLNHD
 !                                                                       
 !     -------------------------------------------------------------     
 !                                                                       
@@ -1923,7 +1923,7 @@
 !                                                                       
       RETURN 
 !                                                                       
-      END                                           
+end subroutine EXPINT
 !                                                                       
 !     -------------------------------------------------------------     
 !                                                                       
@@ -2770,8 +2770,6 @@
                                                                         
                         nlayer = nlayd1 
                         dv_lbl = dv_lbl1 
-                        print *,'dv_lbl ',dv_lbl
-                        print *,'dv_lbl1 ',dv_lbl1
                                                                         
                         lh1 = nlayer 
                         lh2 = 1 
@@ -4071,7 +4069,7 @@
      &        'LAYTOT = ',I4,'NLAYD1 = ',I4)                            
  1015 FORMAT (3x,I2) 
 !                                                                       
-      END                                           
+end subroutine XLAYER
 !                                                                       
 !     -------------------------------------------------------------     
 !                                                                       
@@ -4458,7 +4456,7 @@
      &        55X,'************************************************',/) 
                                                                         
 !                                                                       
-      END                                           
+end subroutine OPPATH
 !                                                                       
 !     -------------------------------------------------------------     
 !                                                                       
@@ -6108,13 +6106,13 @@
      &        '           equal to zero; Layer #: ',I3,/                &
      &        ' ************************************************')      
 !                                                                       
-      END                                           
+end subroutine PATH
       BLOCK DATA BOPDPT 
       COMMON /CONVF/ CHI(251),RDVCHI,RECPI,ZSQBND,A3,B3,JCNVF4 
 !                                                                       
       DATA JCNVF4 / 0 / 
 !                                                                       
-      END                                           
+end block data BOPDPT
 !                                                                       
 !     -------------------------------------------------------------     
 !                                                                       
@@ -6265,7 +6263,7 @@
   925 FORMAT ('0 TIME LEAVING OPDPTH ',F15.3,'  TOTAL FOR LAYER ',      &
      &        F15.3)                                                    
 !                                                                       
-      END                                           
+end subroutine OPDPTH
 !                                                                       
 !     -------------------------------------------------------------     
 !                                                                       
@@ -6310,7 +6308,7 @@
   900 FORMAT (3E10.3,5X,I5) 
   910 FORMAT (E15.7) 
 !                                                                       
-      END                                           
+end subroutine READEM
 !     -------------------------------------------------------------     
 !                                                                       
       SUBROUTINE READRF(ICOEF) 
@@ -6351,7 +6349,7 @@
   900 FORMAT (3E10.3,5X,I5) 
   910 FORMAT (E15.7) 
 !                                                                       
-      END                                           
+end subroutine READRF
 !-----------------------------------------------------------------------
 !                                                                       
       subroutine line_exception(ind,ipr,h_sub,mol,nmol,iso,iso_max) 
@@ -6408,7 +6406,7 @@
    25    continue 
                                                                         
          return 
-      END                                           
+end subroutine line_exception
 !-----------------------------------------------------------------------
 !                                                                       
       subroutine scnmrg_aj(nlayer,iup_dn) 
@@ -6506,7 +6504,7 @@
   100 continue 
                                                                         
       return 
-      END                                           
+end subroutine scnmrg_aj
 !-----------------------------------------------------------------------
 !-----------------------------------------------------------------------
 !                                                                       
@@ -6846,13 +6844,14 @@
   100 continue 
                                                                         
       return 
-      END                                           
+end subroutine layer2level
 !-----------------------------------------------------------------------
       subroutine sfcderiv(k_rddn_sfc,tbound) 
 !                                                                       
 ! subroutine to compute surface derivatives                             
 !                                                                       
       USE phys_consts, ONLY: radcn2
+   USE lblparams, ONLY : dbg
       IMPLICIT REAL*8 (V) 
       character*8      XID,       HMOLID,      YID 
       real*8               SECANT,       XALTZ 
@@ -6931,6 +6930,7 @@
                                                                         
       XKTBND = TBOUND/RADCN2 
       VI = V1P-DVP 
+   EMLAST = -1.
       VIDVEM   = VI 
       VIDVRF   = VI 
       VIDVBD   = VI 
@@ -6946,28 +6946,16 @@
       NLIM1 = 0 
       NLIM2 = 0 
       EMDUM = 0. 
-      BBDUM = 0. 
+   if (dbg(25)) then
+      print *, 'sfcderiv:: :: CHECKED'
+      dbg(25) = .false.
+   endif
       EMISIV = EMISFN   (VI,DVP,VIDVEM,EMDEL,EMDUM) 
-      BB =     BBFN     (VI,DVP,V2P,XKTBND,VIDVBD,BBDEL,BBDUM) 
-      BBdT =   BBdTfn(BB,VI,DVP,V2P,XKTBND,VIDD,  BBdTd,BBdTdum) 
-      IEMBB = 0 
-      IF (VIDVBD.GT.VIDVEM) IEMBB = 1 
 !                                                                       
+   VI = V1P
    40 NLIM1 = NLIM2+1 
 !                                                                       
-      VI = V1P+ REAL(NLIM1-1)*DVP 
-      IF (IEMBB.EQ.0) THEN 
-         BB = BBFN (VI,DVP,V2P,XKTBND,VIDV, BBDEL, BBlast) 
-         BBdT = BBdTfn(BB,VI,DVP,V2P,XKTBND,VDdel,BBdTdel,BBdTlast) 
-         VIDVEM = -VIDV 
-         EMISIV = EMISFN (VI,DVP,VIDVEM,EMDEL,EMLAST) 
-      ELSE 
-         EMISIV = EMISFN (VI,DVP,VIDV, EMDEL,EMLAST) 
-         VIDVBD = -VIDV 
-         VIDD = -VIDV 
-         BB = BBFN (VI,DVP,V2P,XKTBND,VIDVBD,BBDEL, BBlast) 
-         BBdT = BBdTfn(BB,VI,DVP,V2P,XKTBND,VDdel, BBdTdel,BBdTlast) 
-      ENDIF 
+      EMISIV = EMISFN (VI,DVP,VIDV, EMDEL,EMLAST) 
 !                                                                       
       IF (VIDV.GE.9.E+4) THEN 
          NLIM2 = NLIM+1 
@@ -6976,7 +6964,9 @@
       ENDIF 
       NLIM2 = MIN(NLIM2,NLIM) 
 !                                                                       
-      DO 50 J = NLIM1, NLIM2 
+      DO J = NLIM1, NLIM2
+         BB   = PLANCK   (VI,XKTBND)
+         BBdT = PLANCK_DT(VI,XKTBND, BB)
          DERVOUTt(J) = EMISIV*TRADWN(J)*BBdT 
          DERVOUTe(J) = BB*TRADWN(J) 
          dervoutr(j) = raddwn(j)*tradwn(j) 
@@ -6985,10 +6975,8 @@
 !     Increment interpolation values                                    
 !                                                                       
          EMISIV = EMISIV+EMDEL 
-         BB = BB+BBDEL 
-         BBdT = BBdT+BBdTdel 
-                                                                        
-   50 END DO 
+         VI = VI+ DVP
+      END DO
 !                                                                       
       IF (NLIM2.LT.NLIM) GO TO 40 
                                                                         
@@ -7035,4 +7023,4 @@
                                                                         
       return 
                                                                         
-      END                                           
+end subroutine sfcderiv
